@@ -9,6 +9,13 @@ This platform is an AI-powered tool designed to automate content creation and po
 - **Real-Time Feedback:** Edit and provide feedback on generated content before publishing.
 - **Multi-Platform Support:** Designed for LinkedIn and Twitter (with more platforms planned).
 
+## Demo Video
+
+Curious how it works? Watch this quick demo:
+
+[![Watch the demo](https://img.youtube.com/vi/HFNXlEpLBMY/0.jpg)](https://www.youtube.com/watch?v=HFNXlEpLBMY)
+
+
 ## Current Status
 - **LinkedIn Posting:** Fully functional. Authenticate with LinkedIn, generate posts (with or without images), and publish directly to your LinkedIn feed.
 - **Twitter Integration:** Under development. Twitter authentication and posting features will be available soon.
