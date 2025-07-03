@@ -9,6 +9,31 @@ This platform is an AI-powered tool designed to automate content creation and po
 - **Real-Time Feedback:** Edit and provide feedback on generated content before publishing.
 - **Multi-Platform Support:** Designed for LinkedIn and Twitter (with more platforms planned).
 
+## How it Works
+
+Below is a high-level flowchart of the AI agent's workflow, showing the nodes and decision points:
+
+```mermaid
+flowchart TD
+  START(["START"]) --> entry_node["Entry Node\n(llm_entry_node)"]
+  entry_node -->|tool_calls| tools_node["Tools Node\n(Tavily Search)"]
+  entry_node -->|no tool_calls| generate_post_node["Generate Post Node\n(generate_post_node)"]
+  tools_node --> generate_post_node
+  generate_post_node --> feedback_post_node["Feedback Post Node\n(feedback_post_node)"]
+  feedback_post_node -->|user_edit + image_wanted| search_image_node["Search Image Node\n(search_image_node)"]
+  feedback_post_node -->|user_edit + !image_wanted| upload_node["Upload Node\n(upload_node)"]
+  feedback_post_node -->|feedback| generate_post_node
+  feedback_post_node -->|satisfied + image_wanted| search_image_node
+  feedback_post_node -->|satisfied + !image_wanted| upload_node
+  search_image_node --> image_feedback_node["Image Feedback Node\n(image_feedback_node)"]
+  image_feedback_node -->|image_url| upload_node
+  image_feedback_node -->|satisfied| upload_node
+  upload_node -->|success| END(["END"])
+  upload_node -->|fail| feedback_post_node
+```
+
+For a quick demo, see below:
+
 ## Demo Video
 
 Curious how it works? Watch this quick demo:
