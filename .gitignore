@@ -1,0 +1,15 @@
+# Ignore all .env files (in any folder)
+.env
+**/.env
+*.env
+**/*.env
+
+# Ignore Python cache directories and files
+__pycache__/
+**/__pycache__/
+*.pyc
+**/*.pyc
+
+# Ignore virtual environments
+venv/
+.env/
