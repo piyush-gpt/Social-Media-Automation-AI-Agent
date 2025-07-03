@@ -5,6 +5,7 @@ This platform is an AI-powered tool designed to automate content creation and po
 ## Features
 - **AI-Generated Content:** Automatically create professional posts tailored for your social media audience.
 - **Image Suggestions:** Get smart image recommendations to enhance your posts.
+- **Human-in-the-Loop:** Review, edit, and approve both post content and images before publishing, ensuring quality and relevance.
 - **Real-Time Feedback:** Edit and provide feedback on generated content before publishing.
 - **Multi-Platform Support:** Designed for LinkedIn and Twitter (with more platforms planned).
 
@@ -15,7 +16,7 @@ This platform is an AI-powered tool designed to automate content creation and po
 ## Technology Stack
 - **Frontend:** Next.js (React) with Tailwind CSS for a modern, responsive UI.
 - **Backend:** FastAPI (Python) for API endpoints and session management.
-- **AI Workflow:** LangGraph orchestrates the agent's workflow, including content generation, feedback handling, and posting.
+- **AI Workflow:** LangGraph orchestrates the agent's workflow, including content generation, human-in-the-loop feedback for both post content and images, and posting.
 
 ## Getting Started
 1. Clone the repository.
